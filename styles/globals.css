@@ -1,26 +1,118 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer base {
+  @font-face {
+    font-family: "Inter";
+    src: url("/fonts/Inter-Variable.woff2") format("woff2");
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+    font-family: "Euclid-Circular";
+    src: url("/fonts/Euclid-Circular.woff2") format("woff2");
   }
+
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #a1a5ad #0e0e0f;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #0e0e0f;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #a1a5ad;
+    border-radius: 10px;
+    border: 4px solid #0e0e0f;
+  }
+
+  html {
+    font-family: Inter, system-ui, sans-serif;
+  }
+
   body {
-    color: white;
-    background: black;
+    @apply bg-dark text-white;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold font-heading;
+  }
+
+  h1 {
+    @apply text-4xl sm:text-4xl md:text-5xl xl:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl sm:text-3xl md:text-4xl;
+  }
+
+  p {
+    @apply font-sans;
+  }
+
+  nav {
+    @apply backdrop-blur bg-dark bg-opacity-70;
+  }
+
+  .btn {
+    @apply border-2 focus:border-purple-500 hover:bg-purple-500 focus:ring-4 focus:outline-none focus:ring-purple-500 rounded-md px-5 py-3 text-center text-purple-500 hover:text-dark text-xl font-bold font-heading transition duration-200;
+  }
+
+  .btn-sm {
+    @apply border-2 focus:border-purple-500 hover:bg-purple-500 focus:ring-4 focus:outline-none focus:ring-purple-500 rounded-md px-4 py-2.5 text-center text-purple-500 hover:text-dark text-sm font-bold font-heading transition duration-200;
+  }
+
+  .text-body {
+    @apply text-xl md:text-2xl;
+  }
+
+  .icon svg {
+    @apply h-[1.5em] w-[1.5em] fill-secondary hover:fill-white;
+  }
+
+  .my-container {
+    width: min(100% - 2rem, 900px);
+    margin: auto;
+  }
+
+  /* #navbar-toggler {
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+    justify-content: space-around;
+    border: none;
+  } */
+
+  #navbar-toggler span:nth-child(1) {
+    /* transform: rotate(45deg) translate(4px, 4px); */
+    transform: rotate(0) translate(0, 0);
+  }
+
+  #navbar-toggler span:nth-child(2) {
+    /* transform: rotate(-45deg) translate(4px, -4px); */
+    transform: rotate(0) translate(0, 0);
+  }
+
+  #navbar-toggler span {
+    display: block;
+    width: 32px;
+    height: 2.2px;
+    transition: all 0.3s;
+  }
+
+  #navbar-toggler.collapsed span {
+    transform: rotate(0) translate(0, 0);
   }
 }
