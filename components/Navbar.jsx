@@ -54,11 +54,6 @@ function Navbar() {
                 </li>
               );
             })}
-            <li>
-              <a href="/resume" className="btn-sm">
-                Resume
-              </a>
-            </li>
           </ul>
         </div>
       </div>
