@@ -10,8 +10,8 @@ let data = [
     title: "Mitra Online Shop",
     img: skbImage,
     desc: `
-    Web based Business-to-Consumer e-commerce built with PHP using CodeIgniter framework. 
-    Featuring user login, shopping cart, shipping cost API, etc.
+    A Business-to-Consumer e-commerce built with PHP using CodeIgniter framework. 
+    Featuring user login, shopping cart, & shipping cost API.
       `,
     tech: ["PHP", "CodeIgniter", "MySQL", "jQuery"],
   },
@@ -36,18 +36,18 @@ function Projects() {
         return (
           <div
             key={i}
-            className="grid grid-cols-12 gap-4 group md:relative mb-36"
+            className="grid grid-cols-12 gap-4 group md:relative mb-8 md:mb-24"
           >
-            <div className="col-start-1 group-even:md:col-start-7 group-even:lg:col-start-6 col-span-12 md:col-span-6 lg:col-span-7 md:w-[115%] lg:w-[100%] group-even:md:absolute group-even:md:right-0">
-              <a href="">
+            <div className="col-start-1 group-even:md:col-start-7 group-even:lg:col-start-6 col-span-12 md:col-span-6 lg:col-span-7 md:w-[115%] lg:w-[100%] group-even:md:absolute group-even:md:right-0 hidden md:inline">
+              <a href={x.link} target="_blank" className="saturate-[.15] hover:saturate-100 transition-all duration-300 hover:drop-shadow-[0_0_18px_rgba(100,100,100,0.25)]">
                 <Image src={x.img} alt={x.title} className="rounded-md" />
               </a>
             </div>
             <div className="col-start-1 md:col-start-7 lg:col-start-8 group-even:md:col-start-1 col-span-12 md:col-span-6 lg:col-span-5 lg:w-[115%] group-odd:md:absolute group-odd:md:right-0 mt-6 z-10">
-              <h2 className="text-start group-odd:md:text-end leading-none font-bold mb-8 sm:relative">
+              <h2 className="text-start group-odd:md:text-end leading-none font-bold mb-4 sm:relative">
                 {x.title}
               </h2>
-              <div className="bg-[#1a1a1c] rounded-md p-5 mb-8">
+              <div className="bg-[#1a1a1c] rounded-md p-5 mb-4">
                 <p className="text-md group-odd:md:text-right text-secondary">
                   {x.desc}
                 </p>
