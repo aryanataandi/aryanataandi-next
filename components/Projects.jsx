@@ -29,7 +29,7 @@ let data = [
     tech: ["React", "Sass", "Bootstrap"],
   },
   {
-    link: "https://simpus.salatiga.go.id/simpus",
+    link: "http://simpus.salatiga.go.id/simpus/online",
     taglink: "simpus.salatiga.go.id/simpus",
     title: "Health Center Management System",
     img: simpusImage,
