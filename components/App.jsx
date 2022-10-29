@@ -20,9 +20,9 @@ function App() {
               applications. Working on both back-end & front-end technologies.
             </p>
           </div>
-          <Link href="/resume">
-            <a className="btn mr-2">Resume</a>
-          </Link>
+          <a href="/resume.pdf" target="_blank" className="btn mr-2">
+            Resume
+          </a>
           <Link href="/about">
             <a className="btn border-0 hover:bg-opacity-20 hover:text-white">
               About Me
