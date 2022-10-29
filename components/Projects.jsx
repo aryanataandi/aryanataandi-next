@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import komodoImage from "../public/image/project-komodo.png";
 import skbImage from "../public/image/project-skb.png";
+import simpusImage from "../public/image/project-simpus.png";
 
 let data = [
   {
@@ -13,7 +14,7 @@ let data = [
     A Business-to-Consumer e-commerce built with PHP using CodeIgniter framework. 
     Featuring user login, shopping cart, & shipping cost API.
       `,
-    tech: ["PHP", "CodeIgniter", "MySQL", "jQuery"],
+    tech: ["PHP", "CodeIgniter", "MySQL"],
   },
   {
     link: "https://komodo-os.my.id",
@@ -27,6 +28,18 @@ let data = [
       `,
     tech: ["React", "Sass", "Bootstrap"],
   },
+  {
+    link: "https://simpus.salatiga.go.id/simpus",
+    taglink: "simpus.salatiga.go.id/simpus",
+    title: "Health Center Management System",
+    img: simpusImage,
+    desc: `
+    A web-based application that is used to manage patient data, examinations, 
+    and payments for a health care provider. This application has features such as online 
+    registration and multi-level login
+      `,
+    tech: ["PHP", "CodeIgniter", "Firebird", "jQuery"],
+  },
 ];
 
 function Projects() {
@@ -39,11 +52,15 @@ function Projects() {
             className="grid grid-cols-12 gap-4 group md:relative mb-8 md:mb-24"
           >
             <div className="col-start-1 group-even:md:col-start-7 group-even:lg:col-start-6 col-span-12 md:col-span-6 lg:col-span-7 md:w-[115%] lg:w-[100%] group-even:md:absolute group-even:md:right-0 hidden md:inline">
-              <a href={x.link} target="_blank" className="saturate-[.15] hover:saturate-100 transition-all duration-300 hover:drop-shadow-[0_0_18px_rgba(100,100,100,0.25)]">
+              <a
+                href={x.link}
+                target="_blank"
+                className="saturate-[.15] hover:saturate-100 transition-all duration-300 hover:drop-shadow-[0_0_18px_rgba(100,100,100,0.25)]"
+              >
                 <Image src={x.img} alt={x.title} className="rounded-md" />
               </a>
             </div>
-            <div className="col-start-1 md:col-start-7 lg:col-start-8 group-even:md:col-start-1 col-span-12 md:col-span-6 lg:col-span-5 lg:w-[115%] group-odd:md:absolute group-odd:md:right-0 mt-6 z-10">
+            <div className="col-start-1 md:col-start-7 lg:col-start-8 group-even:md:col-start-1 col-span-12 md:col-span-6 lg:col-span-5 lg:w-[115%] group-odd:md:absolute group-odd:md:right-0 mt-6 group-even:md:mb-14 z-10">
               <h2 className="text-start group-odd:md:text-end leading-none font-bold mb-4 sm:relative">
                 {x.title}
               </h2>
