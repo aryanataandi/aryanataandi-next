@@ -9,7 +9,7 @@ export default function Custom404() {
           Nothing here, are you lost? Need a hand? <br />- error code 404
         </p>
         <Link href="/">
-          <a className="btn border-0 hover:bg-opacity-20 hover:text-white">Go Home</a>
+          <a className="btn-secondary">Go Home</a>
         </Link>
       </div>
     </section>

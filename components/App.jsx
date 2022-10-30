@@ -24,7 +24,7 @@ function App() {
             Resume
           </a>
           <Link href="/about">
-            <a className="btn border-0 hover:bg-opacity-20 hover:text-white">
+            <a className="btn-secondary">
               About Me
             </a>
           </Link>
