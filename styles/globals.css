@@ -51,11 +51,11 @@
   }
 
   h1 {
-    @apply text-4xl sm:text-4xl md:text-5xl xl:text-6xl;
+    @apply text-3xl sm:text-4xl md:text-5xl xl:text-6xl;
   }
 
   h2 {
-    @apply text-3xl sm:text-3xl md:text-4xl;
+    @apply text-2xl sm:text-3xl md:text-4xl;
   }
 
   p {
@@ -79,7 +79,7 @@
   }
 
   .text-body {
-    @apply text-xl md:text-2xl;
+    @apply text-lg md:text-2xl;
   }
 
   .icon svg {

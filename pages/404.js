@@ -4,8 +4,8 @@ export default function Custom404() {
   return (
     <section className="min-h-screen flex">
       <div className="m-auto text-center">
-        <h1 className="text-8xl mb-8">Oops!</h1>
-        <p className="text-body text-secondary mb-8">
+        <h1 className="text-6xl md:text-8xl mb-8">Oops!</h1>
+        <p className="text-xl md:text-body text-secondary mb-8">
           Nothing here, are you lost? Need a hand? <br />- error code 404
         </p>
         <Link href="/">
