@@ -20,9 +20,9 @@ let list = [
 function Navbar() {
   return (
     <nav className="fixed w-full z-20 top-0 left-0 px-2 sm:px-4 py-4 md:py-2.5">
-      <div className="my-container flex flex-wrap justify-between items-center mx-auto">
+      <div className="my-container flex flex-wrap justify-center md:justify-between items-center mx-auto">
         <Link href="/" className="flex items-center">
-          <a>
+          <a className="hidden md:inline">
             <Image
               src="/logo.svg"
               alt="Logo"
@@ -32,7 +32,7 @@ function Navbar() {
             ></Image>
           </a>
         </Link>
-        <button
+        {/* <button
           data-collapse-toggle="navbar-default"
           id="navbar-toggler"
           type="button"
@@ -42,9 +42,9 @@ function Navbar() {
         >
           <span className="bg-white" />
           <span className="bg-white" />
-        </button>
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul className="flex flex-col py-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
+        </button> */}
+        <div className="" id="navbar-default">
+          <ul className="flex py-2 md:py-4 rounded-lg flex-row space-x-14 md:space-x-8 mt-0 md:text-sm md:border-0">
             {list.map((x, i) => {
               return (
                 <li key={i}>
