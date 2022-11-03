@@ -112,7 +112,7 @@ const data = [
   },
 ];
 
-export default function Archive() {
+export default function Projects() {
   return (
     <div className="mt-48">
       <Head>

@@ -38,7 +38,7 @@ function App() {
           <Projects />
           <div className="text-center mb-56 mt-14 md:mt-32">
             <h2 className="mb-7">Other things i've built</h2>
-            <Link href="/archive">
+            <Link href="/projects">
               <a className="btn">Project Archive</a>
             </Link>
           </div>

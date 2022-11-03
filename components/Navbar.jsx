@@ -12,8 +12,8 @@ let list = [
     url: "/about",
   },
   {
-    name: "Contact",
-    url: "/contact",
+    name: "Project",
+    url: "/projects",
   },
 ];
 
