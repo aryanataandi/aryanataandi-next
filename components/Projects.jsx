@@ -61,8 +61,8 @@ function Projects() {
               </a>
             </div>
             <div className="col-start-1 md:col-start-7 lg:col-start-8 group-even:md:col-start-1 col-span-12 md:col-span-6 lg:col-span-5 lg:w-[115%] group-odd:md:absolute group-odd:md:right-0 mt-6 group-even:md:mb-14 z-10">
-              <h2 className="text-start group-odd:md:text-end leading-none font-bold mb-4 sm:relative">
-                {x.title}
+              <h2 className="text-start group-odd:md:text-end leading-none font-bold mb-4 sm:relative hover:text-purple-500 transition-all duration-300">
+                <a href={x.link} target="_blank">{x.title}</a>
               </h2>
               <div className="bg-[#1a1a1c] rounded-md p-5 mb-4">
                 <p className="text-md group-odd:md:text-right text-secondary">
