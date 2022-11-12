@@ -9,7 +9,7 @@ module.exports = {
       center: true,
     },
     fontFamily: {
-      sans: ["Inter", "sans-serif"],
+      sans: ["Inter-Regular", "sans-serif"],
       heading: ["Euclid-Circular", "sans-serif"],
     },
     extend: {
