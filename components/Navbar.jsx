@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useScrollPosition } from "../hooks";
 
 let list = [
   {
@@ -20,30 +21,31 @@ let list = [
 function Navbar() {
   const [open, setOpen] = useState(false);
 
+  const scrollPosition = useScrollPosition();
+
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(" ");
+  }
+
   const hotdogClick = () => {
     let hotdog = document.getElementById("hotdog");
     let navmenu = document.getElementById("navbar-menu");
     let body = document.querySelector("body");
 
     hotdog.classList.toggle("hotdog-active");
-    // hotdog.classList.toggle("pr-[34px]");
     navmenu.classList.toggle("hidden");
     navmenu.classList.toggle("grid");
     body.classList.toggle("overflow-y-hidden");
-    // body.classList.toggle("pr-[16px]");
     setOpen(!open);
   };
 
-  useEffect(() => {
-    /* window.addEventListener('scroll', controlNavbar);
-
-    return () => {
-      window.removeEventListener('scroll', controlNavbar);
-    }; */
-  }, []);
-
   return (
-    <nav className="fixed w-full z-20 top-0 left-0 px-2 sm:px-4 py-4 md:py-2.5">
+    <nav
+      className={classNames(
+        scrollPosition <= 70 ? "md:py-8 bg-transparent" : "md:py-2.5 bg-dark bg-opacity-70 shadow-sm shadow-dark",
+        "fixed backdrop-blur w-full z-20 top-0 left-0 px-2 sm:px-4 py-4 transition-all duration-300"
+      )}
+    >
       <div className="my-container flex flex-wrap justify-between items-center mx-auto relative">
         <Link href="/" className="flex items-center">
           <a>
