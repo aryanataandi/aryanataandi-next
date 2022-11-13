@@ -19,7 +19,7 @@ let list = [
 ];
 
 function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
 
   const scrollPosition = useScrollPosition();
 
@@ -27,22 +27,42 @@ function Navbar() {
     return classes.filter(Boolean).join(" ");
   }
 
-  const hotdogClick = () => {
-    let hotdog = document.getElementById("hotdog");
-    let navmenu = document.getElementById("navbar-menu");
-    let body = document.querySelector("body");
-
-    hotdog.classList.toggle("hotdog-active");
-    navmenu.classList.toggle("hidden");
-    navmenu.classList.toggle("grid");
-    body.classList.toggle("overflow-y-hidden");
-    setOpen(!open);
+  const menuClick = () => {
+    hotdogClick();
+    const body = document.querySelector("body");
+    body.classList.remove("overflow-y-hidden");
+    setOpenMenu(false);
   };
+
+  const hotdogClick = () => {
+    const body = document.querySelector("body");
+    body.classList.toggle("overflow-y-hidden");
+
+    setOpenMenu(!openMenu);
+  };
+
+  useEffect(() => {
+    const body = document.querySelector("body");
+    const button = document.getElementsByClassName("menu");
+
+    body.classList.add("md:overflow-y-auto");
+    for (let i = 0; i < button.length; i++) {
+      button[i].addEventListener("click", menuClick);
+    }
+
+    return () => {
+      for (let i = 0; i < button.length; i++) {
+        button[i].removeEventListener("click", menuClick);
+      }
+    };
+  });
 
   return (
     <nav
       className={classNames(
-        scrollPosition <= 70 ? "md:py-8 bg-transparent" : "md:py-2.5 bg-dark bg-opacity-70 shadow-sm shadow-dark",
+        scrollPosition <= 70
+          ? "md:py-8 bg-transparent"
+          : "md:py-2.5 bg-dark bg-opacity-70 shadow-sm shadow-dark",
         "fixed backdrop-blur w-full z-20 top-0 left-0 px-2 sm:px-4 py-4 transition-all duration-300"
       )}
     >
@@ -63,7 +83,10 @@ function Navbar() {
           data-collapse-toggle="navbar-default"
           id="hotdog"
           type="button"
-          className="inline-flex items-center h-[35px] w-[35px] p-2 ml-3 text-sm text-gray-500 justify-around flex-col md:hidden z-[99]"
+          className={classNames(
+            openMenu ? "hotdog-active" : "",
+            "inline-flex items-center h-[35px] w-[35px] p-2 ml-3 text-sm text-gray-500 justify-around flex-col md:hidden z-[99]"
+          )}
           aria-controls="navbar-menu"
           aria-expanded="false"
         >
@@ -71,15 +94,23 @@ function Navbar() {
           <span className="bg-white" />
         </button>
         <div
-          className="hidden md:block md:static md:bg-transparent h-screen md:h-full w-full md:w-auto top-full place-items-center"
           id="navbar-menu"
+          className={classNames(
+            openMenu ? "grid" : "hidden",
+            "md:block md:static md:bg-transparent h-screen md:h-full w-full md:w-auto top-full place-items-center"
+          )}
         >
           <ul className="flex flex-col md:py-4 pb-32 rounded-lg md:flex-row md:space-x-8 mx-auto items-center align-middle md:mt-0 text-xl md:text-sm font-bold md:font-medium md:border-0">
             {list.map((x, i) => {
               return (
                 <li key={i} className="my-4 md:my-0">
                   <Link href={x.url} className="block py-2 pr-4 pl-3 md:p-0">
-                    <a className="text-secondary hover:text-white">{x.name}</a>
+                    <a
+                      className="text-secondary hover:text-white menu"
+                      // onClick={() => menuClick()}
+                    >
+                      {x.name}
+                    </a>
                   </Link>
                 </li>
               );
