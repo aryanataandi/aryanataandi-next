@@ -32,7 +32,7 @@ function App() {
       </section>
       <section>
         <div className="pt-16">
-          <h2 className="leading-none mb-8">
+          <h2 className="leading-none md:mb-8">
             My Work<span className="text-purple-500">.</span>
           </h2>
           <Projects />

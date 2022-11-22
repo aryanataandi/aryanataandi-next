@@ -2,7 +2,7 @@ import Head from "next/head";
 
 export default function Archive() {
   return (
-    <section className="my-36">
+    <section className="mt-48">
       <h2 className="leading-none mb-8">
         About Me<span className="text-purple-500">.</span>
       </h2>
