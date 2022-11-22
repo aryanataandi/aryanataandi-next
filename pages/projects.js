@@ -1,4 +1,6 @@
 import Head from "next/head";
+import ExternalLink from "../components/icons/ExternalLink";
+import Github from "../components/icons/Github";
 
 const data = [
   {
@@ -8,12 +10,8 @@ const data = [
     tech: ["Next.JS", "Tailwind CSS"],
     link: [
       {
-        type: "external",
-        link: "https://komodo-os.my.id",
-      },
-      {
         type: "github",
-        link: "https://github.com/Komodo-OS-Devices/Komodo-OS-Devices.github.io/tree/react",
+        link: "https://github.com/aryanataandi/aryanataandi-next",
       },
     ],
   },
@@ -35,31 +33,13 @@ const data = [
   },
   {
     year: 2022,
-    title: "Indikator Kota Sehat App",
-    made: "Mitra Solusi",
-    tech: ["PHP", "CodeIgniter", "JavaScript"],
-    link: [],
-  },
-  {
-    year: 2022,
-    title: "Pintar UMKM Salatiga",
-    made: "Mitra Solusi",
-    tech: ["PHP", "CodeIgniter", "JavaScript"],
-    link: [],
-  },
-  {
-    year: 2022,
     title: "Personal Website V1",
     made: "Personal Project",
     tech: ["React", "Sass", "Bootstrap"],
     link: [
       {
-        type: "external",
-        link: "https://komodo-os.my.id",
-      },
-      {
         type: "github",
-        link: "https://github.com/Komodo-OS-Devices/Komodo-OS-Devices.github.io/tree/react",
+        link: "https://github.com/aryanataandi/aryanataandi-react",
       },
     ],
   },
@@ -71,7 +51,19 @@ const data = [
     link: [
       {
         type: "external",
-        link: "http://simpus.salatiga.go.id/simpus",
+        link: "http://simpus.salatiga.go.id/simpus/online",
+      },
+    ],
+  },
+  {
+    year: 2021,
+    title: "Research Paper (Bachelor Thesis)",
+    made: "Satya Wacana Christian University",
+    tech: ["PHP", "CodeIgniter", "MySQL", "Scrum Methodology"],
+    link: [
+      {
+        type: "external",
+        link: "https://jurnal.itg.ac.id/index.php/algoritma/article/view/869",
       },
     ],
   },
@@ -82,8 +74,8 @@ const data = [
     tech: ["PHP", "JavaScript", "CodeIgniter", "MySQL"],
     link: [
       {
-        type: "github",
-        link: "https://github.com/aryanataandi/inventori-pos",
+        type: "external",
+        link: "https://drive.google.com/drive/folders/1C6mf46NZtH5WfGqhd5z2FkWBhB-wPgbv?usp=share_link",
       },
     ],
   },
@@ -92,13 +84,22 @@ const data = [
     title: "Web Based Wedding Invitation",
     made: "Personal Project",
     tech: ["HTML", "CSS", "JavaScript"],
-    link: [],
+    link: [
+      {
+        type: "external",
+        link: "https://aryanataandi.github.io/html-wedding-invitation",
+      },
+      {
+        type: "github",
+        link: "https://github.com/aryanataandi/html-wedding-invitation",
+      },
+    ],
   },
   {
     year: 2021,
     title: "Mitra Online Shop",
     made: "UPTD SPNF SKB Salatiga",
-    tech: ["HTML", "CSS", "CodeIgniter", "MySQL"],
+    tech: ["PHP", "HTML", "CSS", "CodeIgniter", "MySQL"],
     link: [
       {
         type: "external",
@@ -160,12 +161,33 @@ export default function Projects() {
                   <td className="py-4 pr-4 hidden md:table-cell">
                     {x.tech.join(" · ")}
                   </td>
-                  <td className="py-4">-</td>
+                  <td className="py-4 flex">
+                    {x.link.map((x, index) => {
+                      return (
+                        <a
+                          className="icon mr-1"
+                          href={x.link}
+                          target="_blank"
+                          rel="noreferrer"
+                          key={index}
+                        >
+                          {x.type === "external" ? (
+                            <ExternalLink />
+                          ) : x.type === "github" ? (
+                            <Github />
+                          ) : (
+                            "-"
+                          )}
+                        </a>
+                      );
+                    })}
+                  </td>
                 </tr>
               );
             })}
           </tbody>
         </table>
+        <small className="text-gray-700">* and many projects that i can't mention</small>
       </div>
     </div>
   );
