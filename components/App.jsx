@@ -16,17 +16,16 @@ function App() {
             </h1>
             <br />
             <p className="text-secondary text-body">
-              I am a Software Engineer, specializing in building web based
-              applications. Working on both back-end & front-end technologies.
+              I am a web programmer with over 2 years of work experience. I
+              specialize in creating and maintaining websites and web
+              applications.
             </p>
           </div>
           <a href="/resume.pdf" target="_blank" className="btn mr-2">
-            Resume
+            My Resume
           </a>
           <Link href="/about">
-            <a className="btn-secondary">
-              About Me
-            </a>
+            <a className="btn-secondary">About Me</a>
           </Link>
         </div>
       </section>

@@ -11,8 +11,8 @@ let data = [
     title: "Mitra Online Shop",
     img: skbImage,
     desc: `
-    A Business-to-Consumer e-commerce built with PHP using CodeIgniter framework. 
-    Featuring user login, shopping cart, & shipping cost API.
+    A web-based business-to-consumer e-commerce built with PHP using CodeIgniter framework. 
+    Featuring user login, a shopping cart system, and shipping costs calculation from API.
       `,
     tech: ["PHP", "CodeIgniter", "MySQL"],
   },
@@ -23,8 +23,9 @@ let data = [
     img: komodoImage,
     desc: `
     This is an official website of one of the most popular custom AOSP
-    ROM, Komodo OS. It provides information & latest releases for many
-    Android devices.
+    ROM, Komodo OS.<br/><br/>It features information about the features and capabilities 
+    of Komodo OS, as well as links to download the operating system and access 
+    documentation and support resources.
       `,
     tech: ["React", "Sass", "Bootstrap"],
   },
@@ -34,9 +35,9 @@ let data = [
     title: "Health Center Management System",
     img: simpusImage,
     desc: `
-    A web-based application that is used to manage patient data, examinations, 
-    and payments for a health care provider. This application has features such as online 
-    registration and multi-level login
+    A web-based application that helps healthcare providers manage patient 
+    information and tasks.<br/> It includes features like EMR systems, online registration, 
+    multi-level login, billing and monthly report.
       `,
     tech: ["PHP", "CodeIgniter", "Firebird", "jQuery"],
   },
@@ -72,9 +73,10 @@ function Projects() {
                 </a>
               </h2>
               <div className="bg-[#1a1a1c] rounded-md p-5 mb-4">
-                <p className="text-md group-odd:md:text-right text-secondary">
-                  {x.desc}
-                </p>
+                <p
+                  className="text-md group-odd:md:text-right text-secondary"
+                  dangerouslySetInnerHTML={{ __html: x.desc }}
+                ></p>
               </div>
               <div className="group-odd:md:text-right">
                 {x.tech.map((y, i) => {

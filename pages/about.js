@@ -8,22 +8,20 @@ export default function Archive() {
       </h2>
       <div className="text-secondary">
         <p className="text-xl mb-8">
-          My name is Aryanata Andipradana. You can call me Ryan. I love creating
-          digital products such as web application, design, animation, video and
-          more.
+          My name is Aryanata Andipradana, but you can call me Ryan. I am a Web
+          Developer at a company that focuses on web application development.
         </p>
         <p className="text-xl mb-8">
-          I work as a Software Engineer in a company that focused on web
-          application development. I build various web applications and provide
-          the best experience in solving real business problems. I handle both
-          back-end and front-end stack in my current company. My main focus
-          these days is building web app using good written code and learning
-          modern front-end technologies.
+          In my current role, I build various web applications and provide the
+          best experience in solving real business problems. My main focus these
+          days is building web app using well written code and strive to master
+          modern front-end technologies or even become a full-stack dev.
         </p>
         <p className="text-xl mb-8">
-          Besides of coding, I have interest in new tech stuff, gaming,
-          designing, photography, videography, meme, and exploring amazing
-          places.
+          Aside from coding, I enjoy designing and developing digital products
+          like creating animations and videos. I have a keen interest in new
+          technologies, as well as in gaming, photography, videography, memes,
+          and traveling to new and interesting places.
         </p>
       </div>
     </section>

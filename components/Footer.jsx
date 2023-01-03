@@ -47,7 +47,7 @@ function App() {
       <div className="my-4 grid grid-cols-1 md:grid-cols-2">
         <div className="text-center md:text-left">
           <p className="text-secondary m-0">
-            Designed & Built by Aryanata Andipradana
+            Designed & Built with ♥ by Aryanata Andipradana
           </p>
         </div>
         <div className="text-center md:text-right">
