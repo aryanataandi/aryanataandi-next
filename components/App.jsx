@@ -17,7 +17,7 @@ function App() {
             <br />
             <p className="text-secondary text-body">
               I am a web programmer with over 2 years of work experience. I
-              specialize in creating and maintaining websites and web
+              specialize in creating, developing, maintaining websites and web
               applications.
             </p>
           </div>
