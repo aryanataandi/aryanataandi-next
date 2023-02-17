@@ -187,7 +187,7 @@ export default function Projects() {
             })}
           </tbody>
         </table>
-        <small className="text-gray-700">* and many projects that i can't mention</small>
+        <small className="text-white text-opacity-20">* and many projects that i can't mention</small>
       </div>
     </div>
   );
