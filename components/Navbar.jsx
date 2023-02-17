@@ -61,9 +61,9 @@ function Navbar() {
     <nav
       className={classNames(
         scrollPosition <= 70
-          ? "md:py-8 bg-transparent"
-          : "md:py-2.5 bg-dark bg-opacity-70 shadow-sm shadow-dark",
-        "fixed backdrop-blur w-full z-20 top-0 left-0 px-2 sm:px-4 py-4 transition-all duration-300"
+          ? "md:py-8"
+          : "md:py-2.5 shadow-sm shadow-dark",
+        "fixed backdrop-blur bg-dark bg-opacity-80 w-full z-20 top-0 left-0 px-2 sm:px-4 py-4 transition-all duration-300"
       )}
     >
       <div className="my-container flex flex-wrap justify-between items-center mx-auto relative">
@@ -100,15 +100,12 @@ function Navbar() {
             "md:block md:static md:bg-transparent h-screen md:h-full w-full md:w-auto top-full place-items-center"
           )}
         >
-          <ul className="flex flex-col md:py-4 pb-32 rounded-lg md:flex-row md:space-x-8 mx-auto items-center align-middle md:mt-0 text-xl md:text-sm font-bold md:font-medium md:border-0">
+          <ul className="flex flex-col md:py-3 pb-32 rounded-lg md:flex-row md:space-x-8 mx-auto items-center align-middle md:mt-0 text-xl md:text-base font-bold md:font-medium md:border-0 w-full">
             {list.map((x, i) => {
               return (
-                <li key={i} className="my-4 md:my-0">
+                <li key={i} className="my-4 md:my-0 w-full">
                   <Link href={x.url} className="block py-2 pr-4 pl-3 md:p-0">
-                    <a
-                      className="text-secondary hover:text-white menu"
-                      // onClick={() => menuClick()}
-                    >
+                    <a className="block text-secondary hover:text-white menu rounded-md text-center">
                       {x.name}
                     </a>
                   </Link>
