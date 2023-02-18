@@ -1,8 +1,12 @@
 import "../styles/globals.css";
 import Head from "next/head";
 import Layout from "../components/Layout";
+import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+
   return (
     <Layout>
       <Head>
@@ -13,9 +17,22 @@ function MyApp({ Component, pageProps }) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="my-container min-h-screen">
+      <motion.div
+        className="my-container min-h-screen"
+        key={router.route}
+        initial="pageInitial"
+        animate="pageAnimate"
+        variants={{
+          pageInitial: {
+            opacity: 0,
+          },
+          pageAnimate: {
+            opacity: 1,
+          },
+        }}
+      >
         <Component {...pageProps} />
-      </div>
+      </motion.div>
     </Layout>
   );
 }

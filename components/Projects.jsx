@@ -52,7 +52,7 @@ function Projects() {
             key={i}
             className="grid grid-cols-12 gap-4 group md:relative mb-8 md:mb-24"
           >
-            <div className="col-start-1 group-even:md:col-start-7 group-even:lg:col-start-6 col-span-12 md:col-span-6 lg:col-span-7 md:w-[115%] lg:w-[100%] group-even:md:absolute group-even:md:right-0 hidden md:inline">
+            <div className="col-start-1 group-even:md:col-start-7 group-even:lg:col-start-6 col-span-12 md:col-span-6 lg:col-span-7 md:w-[115%] lg:w-[100%] group-even:md:absolute group-even:md:right-0 hidden md:inline hover:scale-105 transition-all ease-in-out duration-500">
               <a
                 href={x.link}
                 target="_blank"

@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Projects from "./Projects";
 
-function App() {
+function App({ Component, pageProps, router }) {
   return (
     <>
       <section className="min-h-screen flex">
