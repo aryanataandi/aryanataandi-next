@@ -4,6 +4,18 @@ import Github from "../components/icons/Github";
 
 const data = [
   {
+    year: 2023,
+    title: "Electronic Document Management System",
+    made: "Freelance Project",
+    tech: ["PHP", "CodeIgniter", "MySQL"],
+    link: [
+      {
+        type: "external",
+        link: "https://simantap.kemenagbatang.com/",
+      },
+    ],
+  },
+  {
     year: 2022,
     title: "Personal Website",
     made: "Personal Project",
