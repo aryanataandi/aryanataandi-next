@@ -5,6 +5,17 @@ import Github from "../components/icons/Github";
 const data = [
   {
     year: 2023,
+    title: "Logistics Information System for PT. MIL",
+    made: "Mitra Solusi",
+    tech: ["PHP", "CodeIgniter", "PostgreSQL"],
+    link: [
+      {
+        type: undefined,
+      }
+    ],
+  },
+  {
+    year: 2023,
     title: "Electronic Document Management System",
     made: "Freelance Project",
     tech: ["PHP", "CodeIgniter", "MySQL"],
